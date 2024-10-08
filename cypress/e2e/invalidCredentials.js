@@ -4,7 +4,6 @@ Given('I am on the Sauce Demo login page', () => {
     cy.visit('https://www.saucedemo.com');
     cy.url().should('include', 'saucedemo');// assertion for url
     cy.title().should('eq', 'Swag Labs'); // assertion for the title 
-    cy.wait(10000);
   });
 
   When('I enter Invalid username and password', () => {
