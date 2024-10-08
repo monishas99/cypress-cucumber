@@ -2,6 +2,8 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('I am on the Sauce Demo login page', () => {
   cy.visit('https://www.saucedemo.com');
+  cy.url().should('include', 'saucedemo');// assertion for url
+  cy.title().should('eq', 'Swag Labs'); // assertion for the title 
 });
 
 When('I enter valid username and password', () => {
